@@ -92,8 +92,7 @@ resource "google_compute_instance" "gpu_node" {
 
   boot_disk {
     initialize_params {
-      # Deep Learning VM image with CUDA pre-installed
-      image = "projects/deeplearning-platform-release/global/images/family/common-cu121-debian-11"
+      image = "debian-cloud/debian-11"
       size  = 100
       type  = "pd-ssd"
     }
