@@ -20,16 +20,12 @@ Hệ quả:
 Kết luận mục 1:
 API lỗi do container không up được vì môi trường GPU runtime trên VM chưa đầy đủ, không phải do cú pháp lệnh curl.
 
-## 2) Lý do chưa chụp được Billing/Cost Dashboard
-Tại thời điểm thực hiện lab, dữ liệu chi phí trên Google Cloud Billing chưa cập nhật đủ để phản ánh toàn bộ dịch vụ phát sinh.
+## 2) Billing/Cost Dashboard
+Sau thời gian chờ hệ thống Google Cloud Billing đồng bộ, em đã chụp được ảnh Billing Reports theo yêu cầu.
 
-Giải thích:
-- Google Cloud Billing Reports không cập nhật theo thời gian thực tuyệt đối
-- Có độ trễ đồng bộ dữ liệu (thường từ vài chục phút đến vài giờ)
-- Vì vậy chưa thể chụp được ảnh thể hiện đầy đủ Compute Engine, Load Balancing, Cloud NAT đúng yêu cầu nộp bài
-
-Kết luận mục 2:
-Chưa đủ thời gian để hệ thống Billing cập nhật hoàn chỉnh, nên chưa thể cung cấp screenshot chi phí đầy đủ tại thời điểm hiện tại.
+Kết quả:
+- Đã có screenshot Billing/Reports
+- Ảnh minh chứng: [billing_report.png](./billing_report.png)
 
 ## 3) Trả lời câu hỏi: Report Cold Start Time
 Theo yêu cầu bài lab, Cold Start Time được đo từ thời điểm xác nhận triển khai (gõ yes khi chạy terraform apply) đến thời điểm lệnh curl nhận phản hồi inference thành công.
@@ -46,4 +42,5 @@ Image ban đầu dùng trong cấu hình main.tf là "projects/deeplearning-plat
 ## Thay vào đó
 Em đã nộp các minh chứng khác:
 - [Screenshot](./tf_apply.png) `terraform apply` thành công
-- `Bao_cao.md`
+- [Screenshot](./billing_report.png) Billing/Reports
+- `Bao_cao.md` (file này)
